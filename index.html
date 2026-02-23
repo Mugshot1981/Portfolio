@@ -12,6 +12,16 @@
     header{ display:flex; flex-direction:column; gap:10px; margin-bottom:22px; }
     .title{ font-size:32px; font-weight:800; letter-spacing:.2px; }
     .subtitle{ color:var(--muted); line-height:1.4; }
+    .heroimg{
+      width:100%;
+      max-height:360px;
+      object-fit:cover;
+      border-radius:16px;
+      border:1px solid #23232b;
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+      margin-top:10px;
+    }
+    .credit{ color:var(--muted); font-size:12px; margin-top:6px; }
     .pillrow{ display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
     .pill{ border:1px solid #2a2a33; background:#121217; color:var(--muted); padding:6px 10px; border-radius:999px; font-size:13px; }
     .accent{ color:var(--accent); }
@@ -34,15 +44,18 @@
 <body>
   <div class="wrap">
     <header>
-      <div class="title">[NAAM] — <span class="accent">[INSTRUMENT]</span></div>
+        <div class="title">Stijn de Wit — <span class="accent">Gitaar</span></div>
       <div class="subtitle">
-        [1 zin: genre/stijl] • [1 zin: waar je aan werkt / wat je zoekt in de opleiding]
+        Rock/alternative gitaar • Focus op timing, expressie en samenspel; ik wil dit verdiepen via bandwerk, coaching en theorie.
       </div>
       <div class="pillrow">
         <div class="pill">Deltion — Artiest/Muzikant</div>
         <div class="pill">Focus: timing • expressie • samenspel</div>
-        <div class="pill">Locatie: [plaats]</div>
+        <div class="pill">Locatie: Velp / Arnhem</div>
       </div>
+
+      <img class="heroimg" src="stijn-live.jpg" alt="Stijn de Wit live op gitaar">
+      <div class="credit">Livefoto (portfolio)</div>
     </header>
 
     <section>
