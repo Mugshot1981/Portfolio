@@ -66,11 +66,11 @@
       padding:14px;
     }
 
-    @media (min-width:720px){
-      .card.half{ grid-column:span 6; }
-      .card.third{ grid-column:span 4; }
-      .card.full{ grid-column:span 12; }
-    }
+ @media (min-width:720px){
+  .card.half{ grid-column:span 6; }
+  .card.third{ grid-column:span 6; }  /* 2 per rij */
+  .card.full{ grid-column:span 12; }
+}
 
     .video{
       position:relative;
@@ -201,6 +201,15 @@
         </div>
 
       </div>
+
+      <div class="card third">
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/8SoVOSPKfFM" allowfullscreen></iframe>
+  </div>
+  <div class="muted small" style="margin-top:8px;">
+    Porcelain Eyes — Sternum (Officiële videoclip)
+  </div>
+</div>
     </section>
 
    <section>
