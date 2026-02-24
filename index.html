@@ -6,40 +6,65 @@
   <title>Portfolio — Stijn de Wit</title>
 
   <style>
-    :root { --bg:#0f0f12; --card:#17171d; --text:#f2f2f2; --muted:#b8b8c5; --accent:#ffd24a; }
+    :root{
+      --bg:#0f0f12;
+      --card:#17171d;
+      --text:#f2f2f2;
+      --muted:#b8b8c5;
+      --accent:#ffd24a;
+      --border:#23232b;
+      --border2:#2a2a33;
+    }
 
     *{ box-sizing:border-box; }
-    body{ margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; background:var(--bg); color:var(--text); }
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      background:var(--bg);
+      color:var(--text);
+    }
+
+    a{ color:var(--accent); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
     .wrap{ max-width:980px; margin:0 auto; padding:28px 18px 60px; }
 
     header{ display:flex; flex-direction:column; gap:10px; margin-bottom:22px; }
     .title{ font-size:32px; font-weight:800; }
+    .accent{ color:var(--accent); }
+
     .subtitle{ color:var(--muted); line-height:1.4; }
-    
-.gold-link{
-  color: var(--accent);
-  font-weight: 600;
-}
-.gold-link:hover{
-  text-decoration: underline;
-}
+
     .heroimg{
       width:100%;
       max-height:360px;
       object-fit:cover;
       border-radius:16px;
-      border:1px solid #23232b;
+      border:1px solid var(--border);
       margin-top:10px;
     }
 
     .pillrow{ display:flex; flex-wrap:wrap; gap:8px; }
-    .pill{ border:1px solid #2a2a33; background:#121217; color:var(--muted); padding:6px 10px; border-radius:999px; font-size:13px; }
+    .pill{
+      border:1px solid var(--border2);
+      background:#121217;
+      color:var(--muted);
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:13px;
+    }
 
     section{ margin-top:28px; }
-    h2{ font-size:18px; margin-bottom:12px; }
+    h2{ font-size:18px; margin:0 0 12px; }
 
     .grid{ display:grid; grid-template-columns:repeat(12,1fr); gap:14px; }
-    .card{ grid-column:span 12; background:var(--card); border:1px solid #23232b; border-radius:16px; padding:14px; }
+    .card{
+      grid-column:span 12;
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:14px;
+    }
 
     @media (min-width:720px){
       .card.half{ grid-column:span 6; }
@@ -53,7 +78,7 @@
       aspect-ratio:16/9;
       border-radius:12px;
       overflow:hidden;
-      border:1px solid #2a2a33;
+      border:1px solid var(--border2);
       background:#0b0b0e;
     }
 
@@ -65,16 +90,16 @@
       border:0;
     }
 
+    /* Posters uniform (zelfde hoogte) */
     .poster{
       width:100%;
       height:260px;
       border-radius:12px;
       overflow:hidden;
-      border:1px solid #2a2a33;
+      border:1px solid var(--border2);
       background:#0b0b0e;
       margin-bottom:10px;
     }
-
     .poster img{
       width:100%;
       height:100%;
@@ -92,9 +117,23 @@
       font-size:18px;
       margin-bottom:8px;
     }
-    .accent{
-  color: var(--accent);
-}
+
+    /* Bullet-uitlijning strak */
+    .bullets{
+      margin:8px 0 0 0;
+      padding-left:18px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.55;
+    }
+    .bullets li{ margin:6px 0; }
+    .quote{
+      display:block;
+      margin-top:6px;
+      padding-left:0;
+      color:var(--muted);
+    }
+    .quote em{ font-style:normal; } /* voorkomt rare italic spacing */
 
     /* Lightbox */
     .lightbox{
@@ -107,14 +146,12 @@
       padding:20px;
       z-index:9999;
     }
-
     .lightbox.open{ display:flex; }
-
     .lightbox img{
       max-width:95vw;
       max-height:90vh;
       border-radius:14px;
-      border:1px solid #2a2a33;
+      border:1px solid var(--border2);
     }
 
     .footer{
@@ -126,142 +163,120 @@
 </head>
 
 <body>
-<div class="wrap">
+  <div class="wrap">
 
-<header>
-  <div class="title">
-  Stijn de Wit — <span class="accent">Gitaar</span>
-</div>
-  <div class="subtitle">
-    Rock/alternative gitaar • Focus op timing, expressie en samenspel.
-  </div>
-  <div class="pillrow">
-    <div class="pill">Deltion — Artiest/Muzikant</div>
-    <div class="pill">Velp / Arnhem</div>
-  </div>
-  <img class="heroimg" src="stijn-live.jpg" alt="Live foto">
-</header>
-
-<section>
-  <h2>Video’s</h2>
-  <div class="grid">
-
-    <div class="card third">
-      <div class="video">
-        <iframe src="https://www.youtube.com/embed/crqBlHuaXx8" allowfullscreen></iframe>
+    <header>
+      <div class="title">Stijn de Wit — <span class="accent">Gitaar</span></div>
+      <div class="subtitle">Rock/alternative gitaar • Focus op timing, expressie en samenspel.</div>
+      <div class="pillrow">
+        <div class="pill">Deltion — Artiest/Muzikant</div>
+        <div class="pill">Velp / Arnhem</div>
       </div>
-      <div class="muted small" style="margin-top:8px;">
-        Porcelain Eyes — Sternum (Live)
-      </div>
-    </div>
+      <img class="heroimg" src="stijn-live.jpg" alt="Live foto">
+    </header>
 
-    <div class="card third">
-      <div class="video">
-        <iframe src="https://www.youtube.com/embed/F45KQq8nT_Q" allowfullscreen></iframe>
-      </div>
-      <div class="muted small" style="margin-top:8px;">
-        The Boy I'll Forever Love — Sternum
-      </div>
-    </div>
+    <section>
+      <h2>Video’s</h2>
+      <div class="grid">
 
-    <div class="card third">
-      <div class="video">
-        <iframe src="https://www.youtube.com/embed/zEVcZ_dyR5Y" allowfullscreen></iframe>
+        <div class="card third">
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/crqBlHuaXx8" allowfullscreen></iframe>
+          </div>
+          <div class="muted small" style="margin-top:8px;">Porcelain Eyes — Sternum (Live)</div>
+        </div>
+
+        <div class="card third">
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/F45KQq8nT_Q" allowfullscreen></iframe>
+          </div>
+          <div class="muted small" style="margin-top:8px;">The Boy I'll Forever Love — Sternum</div>
+        </div>
+
+        <div class="card third">
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/zEVcZ_dyR5Y" allowfullscreen></iframe>
+          </div>
+          <div class="muted small" style="margin-top:8px;">Solo — Studio 26</div>
+        </div>
+
       </div>
-      <div class="muted small" style="margin-top:8px;">
-        Solo — Studio 26
+    </section>
+
+    <section>
+      <h2>Optredens</h2>
+      <div class="grid">
+
+        <div class="card half">
+          <div class="poster">
+            <img src="Willemeen 04-02.jpg" alt="Willemeen 4 feb">
+          </div>
+          <div class="muted small">Willemeen — 4 februari</div>
+        </div>
+
+        <div class="card half">
+          <div class="poster">
+            <img src="sternum uitnacht.jpg" alt="Arnhemse Uitnacht — Café Kroon">
+          </div>
+          <div class="muted small">Arnhemse Uitnacht — Café Kroon</div>
+        </div>
+
+        <div class="card half">
+          <div class="poster">
+            <img src="willemeen-19nov.jpg" alt="Willemeen 19 november">
+          </div>
+          <div class="muted small">Willemeen — 19 november</div>
+        </div>
+
+        <div class="card half">
+          <div class="poster">
+            <!-- BELANGRIJK: GitHub Pages is hoofdletter-gevoelig.
+                 Jij zei: sternum_spotlight.png (kleine letters).
+                 Gebruik exact die bestandsnaam in je repo. -->
+            <img src="sternum_spotlight.png" alt="Sternum Spotlight">
+          </div>
+          <div class="muted small">Jong in Arnhem / Willemeen — In the Spotlight</div>
+        </div>
+
       </div>
-    </div>
+    </section>
 
-  </div>
-</section>
+    <section>
+      <div class="grid">
+        <div class="card full">
+          <div class="highlight">3voor12 — “Porcelain Eyes”</div>
 
-<section>
-  <h2>Optredens</h2>
-  <div class="grid">
+          <ul class="bullets">
+            <li>Deelname aan Popspot ontwikkeltraject</li>
+            <li>EP-opname bij Lil Heaven Studios (Arnhem)</li>
+            <li>
+              Muziek op Spotify —
+              <!-- VERVANG deze link door de echte Spotify link van Sternum (artist/track/album). -->
+              <a href="https://open.spotify.com/" target="_blank" rel="noopener">Spotify</a>
+            </li>
+            <li>
+              Uitnacht.nl:
+              <span class="quote">“moddervette ritmesectie met snijdende gitaren. Ondanks hun jonge leeftijd klinkt Sternum volwassen, ambitieus en compromisloos. Met de release van hun eerste EP en een groeiend aantal optredens is Sternum een band om scherp in de gaten te houden.”</span>
+              <a href="https://www.uitnacht.nl/evenement/sternum-metal-kids/" target="_blank" rel="noopener">Uitnacht.nl</a>
+            </li>
+          </ul>
 
-    <div class="card half">
-      <div class="poster">
-        <img src="Willemeen 04-02.jpg" alt="Willemeen 4 feb">
+        </div>
       </div>
-      <div class="muted small">
-        Willemeen — 4 februari
-      </div>
-    </div>
-
-    <div class="card half">
-      <div class="poster">
-        <img src="sternum uitnacht.jpg" alt="Uitnacht Café Kroon">
-      </div>
-      <div class="muted small">
-        Arnhemse Uitnacht — Café Kroon
-      </div>
-    </div>
-
-    <div class="card half">
-      <div class="poster">
-        <img src="willemeen-19nov.jpg" alt="Willemeen 19 nov">
-      </div>
-      <div class="muted small">
-        Willemeen — 19 november
-      </div>
-    </div>
-
-    <div class="card half">
-      <div class="poster">
-        <img src="Sternum_spotlight.png" alt="Sternum Spotlight">
-      </div>
-      <div class="muted small">
-        Jong in Arnhem / Willemeen — In the Spotlight
-      </div>
-    </div>
-
-  </div>
-</section>
-  <section>
-<div class="grid" style="margin-top:18px;">
-  <div class="card full">
-
-    <div class="highlight">3voor12 — “Porcelain Eyes”</div>
-
-    <ul class="muted small" style="margin-top:8px; padding-left:20px;">
-      <li>Deelname aan Popspot ontwikkeltraject</li>
-      <li>EP-opname bij Lil Heaven Studios (Arnhem)</li>
-      <li>Muziek op Spotify</li>
-      <li>
-        Uitnacht.nl: 
-        “moddervette ritmesectie met snijdende gitaren. 
-        Ondanks hun jonge leeftijd klinkt Sternum volwassen, ambitieus en compromisloos. 
-        Met de release van hun eerste EP en een groeiend aantal optredens 
-        is Sternum een band om scherp in de gaten te houden.”
-        <a class="gold-link"
-           href="https://www.uitnacht.nl/evenement/sternum-metal-kids/"
-           target="_blank"
-           rel="noopener">
-          Uitnacht.nl
-        </a>
-      </li>
-    </ul>
-
-  </div>
-</div>
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <section>
       <h2>Ervaring</h2>
       <div class="grid">
         <div class="card half">
-          <ul>
+          <ul class="bullets">
             <li><b>[2025]</b> — [optreden / project] (wat was jouw rol, wat geleerd)</li>
             <li><b>[2024]</b> — [band / lessen] (frequentie, discipline)</li>
             <li><b>[2023]</b> — [eerste band/optreden] (mijlpaal)</li>
           </ul>
         </div>
         <div class="card half">
-          <ul>
+          <ul class="bullets">
             <li><b>Repertoire</b> — [3–6 artiesten/nummers die je speelt]</li>
             <li><b>Gear</b> — [kort: gitaar/versterker/effecten of zang/setup]</li>
             <li><b>Rol</b> — [lead/ritme/zang/backing/arrangement]</li>
@@ -292,46 +307,39 @@
       </div>
     </section>
 
-    <div class="footer">Laatste update: [datum]</div>
+    <div class="footer">Laatste update: 2026</div>
   </div>
-</body>
-</html>
-  
-<div class="footer">
-  Laatste update: 2026
-</div>
 
-</div>
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <img id="lightboxImg" src="" alt="Vergrote afbeelding">
+  </div>
 
-<!-- Lightbox -->
-<div id="lightbox" class="lightbox">
-  <img id="lightboxImg" src="">
-</div>
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightboxImg");
 
-<script>
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightboxImg");
-
-  document.querySelectorAll(".poster img").forEach(img => {
-    img.addEventListener("click", () => {
-      lightboxImg.src = img.src;
-      lightbox.classList.add("open");
-      document.body.style.overflow = "hidden";
+    document.querySelectorAll(".poster img").forEach(img => {
+      img.addEventListener("click", () => {
+        lightboxImg.src = img.getAttribute("src");
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden","false");
+        document.body.style.overflow = "hidden";
+      });
     });
-  });
 
-  lightbox.addEventListener("click", () => {
-    lightbox.classList.remove("open");
-    document.body.style.overflow = "";
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
+    function closeLightbox(){
       lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden","true");
       document.body.style.overflow = "";
+      lightboxImg.src = "";
     }
-  });
-</script>
 
+    lightbox.addEventListener("click", closeLightbox);
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeLightbox();
+    });
+  </script>
 </body>
 </html>
