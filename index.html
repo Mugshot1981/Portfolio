@@ -1,9 +1,9 @@
-n<!doctype html>
+<!doctype html>
 <html lang="nl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio — [NAAM]</title>
+  <title>Portfolio — Stijn de Wit</title>
   <style>
     :root { --bg:#0f0f12; --card:#17171d; --text:#f2f2f2; --muted:#b8b8c5; --accent:#ffd24a; }
     *{ box-sizing:border-box; }
@@ -26,16 +26,20 @@ n<!doctype html>
     .pill{ border:1px solid #2a2a33; background:#121217; color:var(--muted); padding:6px 10px; border-radius:999px; font-size:13px; }
     .accent{ color:var(--accent); }
     .highlight{
-  color: var(--accent);
-  font-weight: 700;
-  font-size: 16px;
-  margin-bottom: 6px;
-}
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
     section{ margin-top:22px; }
     h2{ font-size:18px; margin:0 0 10px; }
     .grid{ display:grid; grid-template-columns:repeat(12,1fr); gap:12px; }
     .card{ grid-column:span 12; background:var(--card); border:1px solid #23232b; border-radius:16px; padding:14px; }
-    @media (min-width:720px){ .card.half{ grid-column:span 6; } .card.third{ grid-column:span 4; } }
+    @media (min-width:720px){
+      .card.half{ grid-column:span 6; }
+      .card.third{ grid-column:span 4; }
+      .card.full{ grid-column:span 12; }
+    }
     a{ color:var(--accent); text-decoration:none; }
     a:hover{ text-decoration:underline; }
     .video{ position:relative; width:100%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; border:1px solid #2a2a33; background:#0b0b0e; }
@@ -45,12 +49,29 @@ n<!doctype html>
     .muted{ color:var(--muted); }
     .small{ font-size:13px; }
     .footer{ margin-top:26px; color:var(--muted); font-size:13px; }
+
+    /* Posters: consistent formaat */
+    .poster{
+      width:100%;
+      height:260px;
+      border-radius:12px;
+      overflow:hidden;
+      border:1px solid #2a2a33;
+      background:#0b0b0e;
+      margin-bottom:10px;
+    }
+    .poster img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-        <div class="title">Stijn de Wit — <span class="accent">Gitaar</span></div>
+      <div class="title">Stijn de Wit — <span class="accent">Gitaar</span></div>
       <div class="subtitle">
         Rock/alternative gitaar • Focus op timing, expressie en samenspel; ik wil dit verdiepen via bandwerk, coaching en theorie.
       </div>
@@ -64,93 +85,107 @@ n<!doctype html>
       <div class="credit">Livefoto (portfolio)</div>
     </header>
 
-<section>
-  <h2>Video’s</h2>
-  <div class="grid">
+    <section>
+      <h2>Video’s</h2>
+      <div class="grid">
+        <div class="card third">
+          <div class="muted small">Live</div>
+          <div class="video" style="margin-top:8px;">
+            <iframe src="https://www.youtube.com/embed/crqBlHuaXx8" allowfullscreen></iframe>
+          </div>
+          <div class="muted small" style="margin-top:8px;">
+            Porcelain Eyes — Sternum.<br>
+            Laatste nummer van de set. Na de lange intro bouw ik spanning op en breng ik stuwing om het publiek mee te krijgen.
+          </div>
+        </div>
 
-    <div class="card third">
-      <div class="muted small">Live</div>
-      <div class="video" style="margin-top:8px;">
-        <iframe src="https://www.youtube.com/embed/crqBlHuaXx8" allowfullscreen></iframe>
-      </div>
-      <div class="muted small" style="margin-top:8px;">
-        Porcelain Eyes — Sternum.<br>
-        Laatste nummer van de set. Na de lange intro bouw ik spanning op en breng ik stuwing om het publiek mee te krijgen.
-      </div>
-    </div>
+        <div class="card third">
+          <div class="muted small">Repetitie / band</div>
+          <div class="video" style="margin-top:8px;">
+            <iframe src="https://www.youtube.com/embed/F45KQq8nT_Q" allowfullscreen></iframe>
+          </div>
+          <div class="muted small" style="margin-top:8px;">
+            The Boy I'll Forever Love — Sternum.<br>
+            Gain open, solo aan.
+          </div>
+        </div>
 
-    <div class="card third">
-      <div class="muted small">Repetitie / band</div>
-      <div class="video" style="margin-top:8px;">
-        <iframe src="https://www.youtube.com/embed/F45KQq8nT_Q" allowfullscreen></iframe>
+        <div class="card third">
+          <div class="muted small">Solo / auditie</div>
+          <div class="video" style="margin-top:8px;">
+            <iframe src="https://www.youtube.com/embed/zEVcZ_dyR5Y" allowfullscreen></iframe>
+          </div>
+          <div class="muted small" style="margin-top:8px;">
+            Solo-optreden — Studio 26.<br>
+            Jaaroptreden van de muziekschool; gevraagd om één nummer te spelen.
+          </div>
+        </div>
       </div>
-      <div class="muted small" style="margin-top:8px;">
-        The Boy I'll Forever Love — Sternum.<br>
-        Gain open, solo aan.
+
+      <div class="muted small" style="margin-top:10px;">
+        Tip: zet video’s op YouTube als “Verborgen (unlisted)” zodat alleen mensen met de link ze zien.
       </div>
-    </div>
+    </section>
 
-    <div class="card third">
-      <div class="muted small">Solo / auditie</div>
-      <div class="video" style="margin-top:8px;">
-        <iframe src="https://www.youtube.com/embed/zEVcZ_dyR5Y" allowfullscreen></iframe>
+    <section>
+      <h2>Optredens & Media</h2>
+      <div class="grid">
+
+        <div class="card half">
+          <div class="poster">
+            <img src="Willemeen 04-02.jpg" alt="Willemeen 4 februari poster">
+          </div>
+          <div class="muted small">
+            Willemeen — 4 februari<br>
+            Samen met Blackout en Mokrypse. Eerste grotere metal line-up in Arnhem.
+          </div>
+        </div>
+
+        <div class="card half">
+          <div class="poster">
+            <img src="sternum uitnacht.jpg" alt="Arnhemse Uitnacht Café Kroon poster">
+          </div>
+          <div class="muted small">
+            Arnhemse Uitnacht — Café Kroon<br>
+            Opening van de avond met Sternum. Volle zaal.
+          </div>
+        </div>
+
+        <div class="card half">
+          <div class="poster">
+            <!-- LET OP: als jouw bestand anders heet, pas deze src aan -->
+            <img src="willemeen-19nov.jpg" alt="Willemeen 19 november poster">
+          </div>
+          <div class="muted small">
+            Willemeen — 19 november<br>
+            EP “Porcelain Eyes” periode. Samen met Dana en Uncentered.
+          </div>
+        </div>
+
+        <div class="card half">
+          <div class="poster">
+            <!-- Als je geen 4e poster wil: vervang dit door een bandfoto of laat dit blok weg -->
+            <img src="Sternum .jpg" alt="Sternum poster">
+          </div>
+          <div class="muted small">
+            Extra poster / aankondiging (Sternum).
+          </div>
+        </div>
+
+        <div class="card full">
+          <div class="muted">
+            <div class="highlight">3voor12 — “Porcelain Eyes”</div>
+            • Deelname aan Popspot ontwikkeltraject<br>
+            • EP-opname bij Lil Heaven Studios (Arnhem)<br>
+            • Interview / eventpagina gepubliceerd over Sternum<br>
+            • Uitnacht.nl: “moddervette ritmesectie met snijdende gitaren” —
+              <a href="https://www.uitnacht.nl/evenement/sternum-metal-kids/" target="_blank" rel="noopener">link</a>
+          </div>
+        </div>
+
       </div>
-      <div class="muted small" style="margin-top:8px;">
-        Solo-optreden — Studio 26.<br>
-        Jaaroptreden van de muziekschool; gevraagd om één nummer te spelen.
-      </div>
-    </div>
+    </section>
 
-  </div>
-
-  <div class="muted small" style="margin-top:10px;">
-    Tip: zet video’s op YouTube als “Verborgen (unlisted)” zodat alleen mensen met de link ze zien.
-  </div>
-</section>
-<section>
-  <h2>Optredens & Media</h2>
-  <div class="grid">
-
-    <div class="card half">
-      <img src="Willemeen 04-02.jpg" style="width:100%; border-radius:12px; margin-bottom:10px;">
-      <div class="muted small">
-        Willemeen — 4 februari<br>
-        Samen met Blackout en Mokrypse. Eerste grotere metal line-up in Arnhem.
-      </div>
-    </div>
-
-    <div class="card half">
-     <img src="sternum uitnacht.jpg" style="width:100%; border-radius:12px; margin-bottom:10px;">
-      <div class="muted small">
-        Arnhemse Uitnacht — Café Kroon<br>
-        Opening van de avond met Sternum. Volle zaal.
-      </div>
-    </div>
-
-    <div class="card half">
-      <img src="willemeen-19nov.jpg" style="width:100%; border-radius:12px; margin-bottom:10px;">
-      <div class="muted small">
-        Willemeen — 19 november<br>
-        EP “Porcelain Eyes” periode. Samen met Dana en Uncentered.
-      </div>
-    </div>
-
-    <div class="card half">
-      <div class="muted">
-        <strong>Media & ontwikkeling</strong><br><br>
-        <div class="highlight">3voor12 vermelding — “Porcelain eyes”</div>
-        • Interview gepubliceerd over Sternum<br>
-        • Sternum beschreven als “moddervette ritmesectie met snijdende gitaren” op Uitnacht.nl <br>
-          (link: uitnacht.nl/evenement/sternum-metal-kids/)
-        • Deelname aan Popspot ontwikkeltraject<br>
-        • EP-opname bij Lil Heaven Studios (Arnhem)<br>
-     
-        
-      </div>
-    </div>
-
-  </div>
-</section>
     <section>
       <h2>Ervaring</h2>
       <div class="grid">
